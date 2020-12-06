@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SignUp Form</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="signupcss.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;665;700&display=swap" rel="stylesheet">
+
+	<script>
+		function checkPassword(form) { 
+                password = form.password.value; 
+                confirm_password = form.confirm_password.value; 
+  
+                if (password == '') 
+                    alert ("Please enter Password"); 
+                      
+                else if (confirm_password == '') 
+                    alert ("Please enter confirm password"); 
+                      
+                else if (password != cofirm_password) { 
+                    alert ("\nPassword did not match: Please try again...") 
+                    return false; 
+                } 
+  
+                else{ 
+                    alert("Password Match: Welcome to eBook Studio!") 
+                    return true; 
+                } 
+            } 
+	</script>
+</head>
+
+<body>
+	<form action="validations.php" method="post" name="myForm" class="pure-form">
+		<div class="logopart">
+			<a href="index.html" style="text-decoration: none;">
+				<img src="LogoOnly.png" alt="OurLogo" id="iii" width="125px" height="90px">
+
+				<div id="ni" class="ni">&lt&#8725eBook Studio&gt</div>
+			</a>
+		</div>
+
+
+
+		<h2 style="font-family: 'Roboto Slab', serif;">Sign Up</h2>
+		<p>
+			<label for="name" class="floatLabel">Email</label>
+			<input id="name" name="usesr" type="email" required>
+		</p>
+		<p>
+			<label for="password" class="floatLabel">Password</label>
+			<input id="password" name="password" type="password" required>
+			<!-- <span></span> -->
+		</p>
+		<p>
+			<button type="submit" id="submit" style="font-family: 'Roboto',serif; color:white"
+				class="pure-button pure-button-primary">Submit</button>
+		</p>
+	</form>
+
+</body>
+
+</html>
